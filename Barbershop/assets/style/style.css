@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+font-family: "Playfair Display", serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+
+--burgundy-red: #800020;
+--cream-white: #F5F5DC;
+--dark-olive-green:#556B2F;
+--mustard-yellow: #FFD700;
+--navy-blue: #2C3E50;
+--brown: #8B4513;
+--dark-transparent: #000000b2;
+--white: #ffffff;
+--font-style: "Playfair Display", serif;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    background-color: var(--cream-white);
+    color: var(--navy-blue);
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------- NAVIGATION SECTION ---------------- */
+
+#navigation {
+    color: var(--mustard-yellow);
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+}
+
+.scrolled {
+    background-color: var(--dark-transparent);
+    top: 0;
+    z-index: 5;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+#navigation a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#navigation a:hover {
+    color: var(--mustard-yellow);
+}
+
+#navigation a img {
+    width: 150px;
+    height: auto;
+}
+
+#navigation a img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+#navlinks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navlinks li {
+    list-style-type: none;
+    margin: 0 20px;
+    animation-timing-function: ease;
+    animation-name: slideIn;
+    animation-duration: 1s;
+    font-weight: 600;
+}
+
+
+
+.logo-small, .logo {
+    animation-timing-function: ease;
+    animation-name: slideIn;
+    animation-duration: 1s;
+
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ----------------- BANNER SECTION ---------------- */
+
+.parallax {
+    background-image: url("../img/banner-bg-dark.jpg");
+    width: 100%;
+    min-height: 80vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 6rem;
+}
+
+.parallax h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--white);
+    text-align: center;
+}
+
+.parallax h1 span{
+    color: var(--mustard-yellow);
+}
+
+
+/* ----------------- ABOUT US SECTION ---------------- */
+
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 100px 20px 0 20px;
+  gap: 5%;
+}
+
+.about-content{
+    width: 30%;
+    min-width: 370px;
+    margin-bottom: 30px;
+}
+
+.about-content h2 {
+    color: var(--brown);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: var(--brown);
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.about-img-container{
+    max-width: 30%;
+    min-width: 370px;
+}
+
+.about-img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* ----------------- SERVICES SECTION ---------------- */
+
+#services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px 20px 0 20px;
+}
+
+#services h1 {
+    color: var(--brown);
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.services-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+.left-col, .right-col {
+    width: 35%;
+    min-width: 370px;
+    margin-bottom: 30px;
+}
+
+.left-col{
+    border-right: 1px solid var(--brown);
+    padding-right: 2.5%;
+}
+
+.right-col{
+    padding-left: 2.5%;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-item p {
+    color: var(--brown);
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.service-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.service-content h3 {
+    color: var(--brown);
+    font-size: 22px;
+}
+
+/* ----------------- BOOKING SECTION ---------------- */
+
+#booking {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px 20px 0 20px;
+    gap: 10px;
+}
+
+#booking h1 {
+    color: var(--brown);
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.barber-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.barber-card {
+    background-color: var(--dark-transparent);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--dark-transparent);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.barber-card:hover {
+    transform: scale(1.05);
+}
+
+.barber-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.barber-card-content {
+    padding: 15px;
+}
+
+.barber-card-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.barber-card-content p {
+    color: var(--white);
+    line-height: 1.5;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ----------------- calendar ---------------- */
+.back-button, #next-step, #confirmBooking {
+    background-color: var(--brown);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid var(--brown);
+    width: 40%;
+    justify-self: center;
+    text-align: center;
+
+}
+
+
+.back-button:hover, #next-step:hover, #confirmBooking:hover {
+    background-color: var(--mustard-yellow);
+    color: var(--brown);
+    border: 1px solid var(--brown);
+}
+
+.booking-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.booking-table th,
+.booking-table td {
+    padding: 10px;
+    border: 1px solid var(--brown);
+    color: var(--brown);;
+}
+
+.booking-table th {
+    background-color: var(--white);
+    font-weight: bold;
+}
+
+.booking-table td {
+    height: 60px;
+}
+
+.date-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-button{
+    width: 80px;
+    height: auto;
+}
+
+.date-button, .time-button {
+    background-color: var(--brown);
+    color: var(--white);
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid var(--brown);
+}
+
+.date-button:hover, .time-button:hover {
+    background-color: var(--mustard-yellow);
+    color: var(--brown);
+    border: 1px solid var(--brown);
+}
+
+
+.time-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 5px;
+}
+
+.date-span {
+    color: var(--brown);
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.barber-container input {
+    padding: 10px;
+    border: 1px solid var(--brown);
+    border-radius: 5px;
+    background-color: var(--white);
+    color: var(--brown);
+    font-size: 20px;
+    font-family: var(--font-style);
+}
+
+.barber-container input::placeholder {
+    color: var(--brown);
+    font-size: 20px; 
+    justify-self: center;
+    align-self: center;
+    font-family: var(--font-style);
+}
+
+.barber-container h5 {
+    color: var(--brown);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+#confirmation-result h1 {
+    color: var(--cream-white);
+    text-align: left;
+}
+
+.error-message-name, .error-message-tel, .error-message-email {
+    color: var(--burgundy-red);
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 16px;
+}
+
+.success-confirmation {
+    background-color: var(--dark-olive-green);
+    padding: 20px;
+}
+
+.failed-confirmation{
+    background-color: var(--burgundy-red);
+    padding: 20px;
+}
+
+#confirmation-result button {
+    width: 50%;
+}
+
+/* ----------------- parallax-line ---------------- */
+
+#parallax-line {
+    background-image: url("../img/parallax-dark.jpg");
+    width: 100%;
+    min-height: 40vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 6rem;
+    margin: 100px 0 0 0;
+}
+
+
+/* ----------------- CONTACT SECTION ---------------- */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 20px 20px 20px;
+}
+
+#contact h1 {
+    color: var(--brown);
+    font-size: 24px;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    gap: 5%;
+}
+
+.contact-info, .contact-img-container{
+    width: 30%;
+    min-width: 370px;
+}
+
+.contact-item {
+    display: flex;
+    margin: 0 10px 10px 0;
+    gap: 10px;
+}
+
+.contact-item h3{
+    color: var(--brown);
+    font-size: 22px;
+}
+
+.contact-item p {
+    color: var(--brown);
+    font-size: 22px;
+    
+}
+.contact-item a {
+    color: var(--brown);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 22px;
+}
+
+.contact-item a:hover {
+    color: var(--mustard-yellow);
+}
+
+.contact-info img, .contact-img-container img {
+    width: 100%;
+    height: auto;
+}
+
+.contact-info img {
+    border: solid 0.5px var(--brown);
+}
+
+
+/* ----------------- FOOTER ------------------- */
+
+footer {
+    width: 100%;
+    height: 10vh;
+    background-color: var(--brown);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-container ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-container li {
+    list-style-type: none;
+}
+
+.footer-container a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-container a:hover {
+    color: var(--mustard-yellow);
+}
+
+

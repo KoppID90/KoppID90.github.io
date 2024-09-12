@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "name": "Balázs",
+        "job": "Barber Master",
+        "introduction": "A klasszikus stílust modern elemekkel ötvözöm, hogy minden vendégem egyedi és magabiztos megjelenést kapjon.",
+        "img":"Balazs.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Rita",
+        "job": "Barber Senior",
+        "introduction": "A borbélyszékben minden férfi megtalálja a saját stílusát, én pedig azért vagyok itt, hogy ezt tökéletesre formáljam.",
+        "img":"Rita.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Lali",
+        "job": "Barber Master",
+        "introduction": "A célom, hogy minden vendégem úgy távozzon, mintha a legjobb önmagát látná a tükörben.",
+        "img":"Lali.jpg"
+    }
+]
+
+    

@@ -1,0 +1,72 @@
+#booking-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    justify-self: center;
+}
+
+#booking-section p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--brown);
+}
+
+#booking-info {
+    width: 80%;
+    
+}
+
+#parallax-line {
+    margin: 0;
+    padding: 0;
+}
+
+#parallax-line h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #fff;
+}
+
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.booking-table caption {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: var(--brown);
+}
+
+.booking-table th, .booking-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.booking-table th {
+    background-color: #f4f4f4;
+}
+
+.booking-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.delete-booking {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.delete-booking:hover {
+    background-color: #ff0000;
+}
+

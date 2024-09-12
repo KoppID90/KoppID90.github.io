@@ -1,0 +1,13 @@
+Ha beilleszted Tibi adatait a barbers.json-be, akkor megjelenik ő is a honlapon
+
+
+,
+{
+        "id": 4,
+        "name": "Tibi",
+        "job": "Barber Senior",
+        "introduction": "Számomra a borbélyszakma nem csupán munka, hanem művészet is, és szeretem látni, hogy az emberek magabiztosan és elégedetten távoznak a szalonból. ",
+        "img":"Tibi.jpg"
+    }
+
+
